@@ -1,4 +1,4 @@
-export enum ETokenStatus{
+export enum ETokenStatus {
   ACTIVE = 'active',
-  DEACTIVATED = 'deactivated',
+  DEACTIVATED = 'deactivated'
 }
