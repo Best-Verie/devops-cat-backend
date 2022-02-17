@@ -12,29 +12,33 @@ import { UsersModule } from './modules/users/users.module';
 import { ResponseModule } from './utils/response/response.module';
 import { AuthModule } from './modules/auth/auth.module';
 import { APP_GUARD } from '@nestjs/core';
+import { MeterModule } from './modules/meter/meter.module';
+import { ElectricitySellingModule } from './modules/electricity-selling/electricity-selling.module';
 
 @Module({
   imports: [
     ConfigModule.forRoot({
       isGlobal: true,
       load: [databaseConfig, appConfig],
-      envFilePath: ['.env'],
+      envFilePath: ['.env']
     }),
     TypeOrmModule.forRootAsync({
-      useClass: TypeOrmConfigService,
+      useClass: TypeOrmConfigService
     }),
     ApartmentsModule,
     UsersModule,
     ResponseModule,
     AuthModule,
+    MeterModule,
+    ElectricitySellingModule
   ],
   controllers: [AppController],
   providers: [
     AppService,
     {
       provide: APP_GUARD,
-      useClass: JwtAuthGuard,
-    },
-  ],
+      useClass: JwtAuthGuard
+    }
+  ]
 })
 export class AppModule {}
