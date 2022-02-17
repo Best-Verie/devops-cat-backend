@@ -17,7 +17,7 @@ export class MeterService {
     private readonly meterRepository: Repository<Meter>
   ) {}
 
-  getAllMeters(): Promise<any> {
+  getAllMeters() {
     try {
       const meters = this.meterRepository.find();
       return meters;
@@ -26,7 +26,7 @@ export class MeterService {
     }
   }
 
-  async getMeterByMeterNumber(mnumber: number): Promise<any> {
+  async getMeterByMeterNumber(mnumber: number) {
     try {
       const meters = this.meterRepository.findOne({
         where: {
@@ -44,7 +44,7 @@ export class MeterService {
     }
   }
 
-  registerMeter(meterDto: createMeterDto): Promise<any> {
+  registerMeter(meterDto: createMeterDto) {
     console.log(meterDto);
     try {
       const owner = meterDto.meter_owner;

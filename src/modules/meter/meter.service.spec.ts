@@ -4,16 +4,16 @@ import { Repository } from 'typeorm';
 import { Meter } from './entities/meter.entity';
 import { MeterService } from './meter.service';
 
-const testMeter1 = 'Test Meter 1';
-const testBreed1 = 'Test Breed 1';
+const testOwner1 = 'Test Meter 1';
+const testMeterNumber = 123456;
 
 const meterArray = [
-  new Meter(testMeter1, 'John', 456746),
-  new Meter('Test Meter 2', 'jane', 337892),
-  new Meter('Test Meter 3', 'pack', 127895)
+  new Meter('John', 456746),
+  new Meter('jane', 337892),
+  new Meter('pack', 127895)
 ];
 
-const oneMeter = new Meter(testMeter1, 'Peter', 123456);
+const oneMeter = new Meter('Peter', testMeterNumber);
 
 describe('MeterService', () => {
   let service: MeterService;

@@ -10,7 +10,8 @@ export class Meter {
   @Column()
   meterNumber: number;
 
-  constructor(id: string, owner: string, meterNumber: number) {
-    (this.id = id), (this.owner = owner), (this.meterNumber = meterNumber);
+  constructor(owner: string, meterNumber: number) {
+    this.owner = owner;
+    this.meterNumber = meterNumber;
   }
 }

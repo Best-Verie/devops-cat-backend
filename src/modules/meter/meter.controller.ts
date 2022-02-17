@@ -34,12 +34,6 @@ export class MeterController {
   }
 
   @Public()
-  @Post()
-  create(@Body() createMeterDto: createMeterDto) {
-    return this.meterService.registerMeter(createMeterDto);
-  }
-
-  @Public()
   @Post('/new')
   newMeter(@Body() meter: createMeterDto): Promise<any> {
     return this.meterService.registerMeter(meter);
