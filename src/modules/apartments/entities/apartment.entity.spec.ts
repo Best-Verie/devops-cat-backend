@@ -9,7 +9,7 @@ describe('Apartment class', () => {
     })
 
 
-   it('should not make an apartment with no fields', () => {
+   it('should make an apartment with no fields', () => {
         const apartment = new Apartment('');
         expect(apartment).toBeTruthy();
         expect(apartment.name).toBe('')
