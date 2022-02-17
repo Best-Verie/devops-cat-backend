@@ -3,7 +3,7 @@ import { Public } from 'src/decorators/public-decorator.decorator';
 import { createTransactionDto } from './dto/createTransactionDto';
 import { ElectricitySellingService } from './electricity-selling.service';
 
-@Controller('electricity-selling')
+@Controller('transactions')
 export class ElectricitySellingController {
   constructor(private readonly electricityService: ElectricitySellingService) {}
 

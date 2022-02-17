@@ -17,4 +17,16 @@ export class electricity {
 
   @Column()
   tokenStatus: ETokenStatus;
+
+  constructor(
+    amount: number,
+    meter_number: number,
+    token: number,
+    tokenStatus: ETokenStatus
+  ) {
+    this.amount = amount;
+    this.meterNumber = meter_number;
+    this.token = token;
+    this.tokenStatus = tokenStatus;
+  }
 }

@@ -6,7 +6,7 @@ import { createMeterDto } from './dto/createMeter.dto';
 import { Meter } from './entities/meter.entity';
 import { MeterService } from './meter.service';
 
-@Controller('meter')
+@Controller('meters')
 export class MeterController {
   constructor(private readonly meterService: MeterService) {}
 
